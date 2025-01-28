@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+/* Follows 60-30-10 color rule */
+--primary: #4b7a94;
+--secondary: #D8D8D8;
+--primary-light: #e1edf3;
+
+--neutral: #F9F9F9; /* color of background */
+--container: #fff; /* color of containers/components */
+
+/* Text Colors (Change to white when using dark mode) */
+--major: #4c697a;
+--minor: #a2b6b0;
+
+--background: #ebf2f5;
+
+
+/* Dark Mode (Copy this hex code then paste to neutral variable) */
+--dark: #0b0e14;
+--dark-container: #0d1017;
+}
