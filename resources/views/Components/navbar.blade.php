@@ -19,11 +19,11 @@
                                 <ul class="sub-menu">
                                     <li><a href="">About Us</a></li>
                                     <li><a href="/services">Services</a></li>
-                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="/contact-us">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="scroll-to-section"><a href="">Testimonials</a></li>
-                            <li><a href="">Contact Support</a></li>
+                            <li><a href="/contact-us">Contact Support</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

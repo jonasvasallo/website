@@ -55,94 +55,56 @@ https://templatemo.com/tm-574-mexant
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="service-item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="left-image">
-                  <img src="/assets/images/elementor-placeholder-image.webp" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="right-text-content">
-                  <!-- Updated to an anchor tag -->
-                  <a href="/services/log-enrichment-and-threat-detection" class="service-button">View
-                    more</a>
-                  <h4>Log Enrichment & Threat Detection</h4>
-                  <p>
-                  <ul>
-                    <li>Leverage system logs from multiple agencies to uncover anomalies and enhance
-                      security investigations.</li>
-                    <li>Facilitate the collection of DNS and flow logs for improved network
-                      visibility.</li>
-                    <li>Deploy advanced solutions to ensure seamless logging without performance
-                      impact.</li>
-                    <li>Provide enriched logs for training programs and investigations, enabling
-                      analysts to detect threats with greater context and efficiency.</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
+          @foreach ($services as $service)
+          @if ($loop->index % 2 == 0)
           <div class="service-item">
             <div class="row">
               <div class="col-lg-6 align-self-center">
                 <div class="left-text-content">
                   <!-- Updated to an anchor tag -->
-                  <a href="/services/enhanced-reporting" class="service-button">View more</a>
-                  <h4>Enhanced Reporting</h4>
+                  <h4>{{ $service['service_name']}} </h4>
                   <p>
                   <ul>
-                    <li>Deliver comprehensive monthly threat reports, including:</li>
-                    <li>Key findings and observations on network activity.</li>
-                    <li>High-level traffic statistics and trends.</li>
-                    <li>Deep-dive analysis of detected malware, anomalies, and potential security
-                      risks.</li>
-                    <li>Identification of suspicious activity that may indicate emerging threats.
-                    </li>
-                    <li>Reports can be tailored to individual agencies, incorporating automated
-                      summaries and human-led insights to highlight security improvements and
-                      vulnerabilities.</li>
+                    <li>{{ $service['service_description'] }}</li>
                   </ul>
                   </p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="right-image">
-                  <img src="/assets/images/elementor-placeholder-image.webp" alt="">
+                  <img src="{{ $service['service_image'] }}" alt=""
+                    style="height: 350px; object-fit: cover;">
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="service-item last-service">
+          @else
+          <div class="service-item">
             <div class="row">
               <div class="col-lg-6">
                 <div class="left-image">
-                  <img src="/assets/images/elementor-placeholder-image.webp" alt="">
+                  <img src="{{ $service['service_image'] }}" alt=""
+                    style="height: 350px; object-fit: cover;">
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
                 <div class="right-text-content">
                   <!-- Updated to an anchor tag -->
-                  <a href="/services/threat-hunting-and-training" class="service-button">View more</a>
-                  <h4>Threat Hunting Training</h4>
+                  <h4>{{ $service['service_name']}} </h4>
                   <p>
                   <ul>
-                    <li>Equip teams with hands-on experience in advanced threat detection and
-                      analysis.</li>
-                    <li>Structured training programs covering:</li>
-                    <li>Methodical threat hunting techniques.</li>
-                    <li>Practical data analysis with real-world enriched logs.</li>
+                    <li>{{ $service['service_description'] }}</li>
                   </ul>
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          @endif
+          @endforeach
+        </div>
+        <div class="col-lg-12">
+
         </div>
       </div>
     </div>

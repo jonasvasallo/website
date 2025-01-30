@@ -50,11 +50,9 @@ https://templatemo.com/tm-574-mexant
                             <li class="has-sub">
                                 <a href="javascript:void(0)">Products </a>
                                 <ul class="sub-menu">
-                                    <li><a href="/services/log-enrichment-and-threat-detection">Log Enrichment and
-                                            Threat Detection</a></li>
-                                    <li><a href="/services/enhanced-reporting">Enhanced Reporting</a></li>
-                                    <li><a href="/services/threat-hunting-and-training">Threat Hunting and Training</a>
-                                    </li>
+                                    @foreach ($services as $service)
+                                    <li><a href="/services">{{ $service['service_name'] }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <><a></a>
